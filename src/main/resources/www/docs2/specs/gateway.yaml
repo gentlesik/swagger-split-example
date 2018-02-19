@@ -1,0 +1,86 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "gateway service"
+  description: "gateway specification"
+host: "localhost"
+basePath: "/docs/specs"
+schemes:
+  - "http"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+paths:
+  allOf:
+  - $ref: taxi.yaml
+  - $ref: black.yaml
+  - $ref: driver.yaml
+  - $ref: parking.yaml
+  - $ref: navi.yaml
+definitions:
+  Taxi:
+    type: "object"
+    required:
+      - "id"
+      - "name"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      tag:
+        type: "string"
+  Black:
+    type: "object"
+    required:
+      - "id"
+      - "name"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      tag:
+        type: "string"
+  Driver:
+    type: "object"
+    required:
+      - "id"
+      - "name"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      tag:
+        type: "string"
+  Parking:
+    type: "object"
+    required:
+      - "id"
+      - "name"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      tag:
+        type: "string"
+  Navi:
+    type: "object"
+    required:
+      - "id"
+      - "name"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      name:
+        type: "string"
+      tag:
+        type: "string"

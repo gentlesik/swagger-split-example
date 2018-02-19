@@ -1,0 +1,31 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "gateway service"
+  description: "gateway specification"
+host: "localhost"
+basePath: "/docs/specs"
+schemes:
+  - "http"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+paths:
+  allOf:
+  - $ref: taxi.yaml
+  - $ref: black.yaml
+  - $ref: driver.yaml
+  - $ref: parking.yaml
+  - $ref: navi.yaml
+definitions:
+  Taxi:
+    $ref: definitions/taxi.yaml
+  Black:
+    $ref: definitions/black.yaml
+  Driver:
+    $ref: definitions/driver.yaml
+  Parking:
+    $ref: definitions/parking.yaml
+  Navi:
+    $ref: definitions/navi.yaml

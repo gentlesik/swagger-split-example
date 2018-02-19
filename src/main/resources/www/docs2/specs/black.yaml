@@ -1,0 +1,10 @@
+  /black:
+    get:
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Black"
